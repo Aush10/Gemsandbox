@@ -1,0 +1,14 @@
+You are given a CSV sheet and a natural-language transformation intent. Produce a short transformation script that when executed produces the expected output. Prefer Python (pandas) or a small Node script using CSV I/O. Provide only the code. Do not call external networks. The environment allows reading the input path and writing to the output path.
+
+Input CSV path: {input_path}
+User intent: {nl}
+
+Constraints:
+- Implement a function run(input_path, output_path) or a script that reads CSV and writes CSV.
+- Avoid large memory usage; prefer vectorized pandas ops.
+- Example:
+def run(inpath,outpath):
+    import pandas as pd
+    df = pd.read_csv(inpath)
+    # transform...
+    df.to_csv(outpath,index=False)
