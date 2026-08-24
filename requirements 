@@ -1,0 +1,9 @@
+pandas
+sqlite3-binary
+Jinja2
+pyyaml
+xlrd
+openpyxl
+flask==2.3.2
+vm2==3.9.5
+# Add formula evaluator if desired, e.g., `formulas` or `xlcalculator
