@@ -21,4 +21,3 @@ Quickstart (local)
 4. Run evaluation demo:
    python3 eval/eval_runner.py --tasks examples/sample_task.json --candidates-dir examples/candidates
 
-If you want this pushed to a GitHub repo, give me the repo owner/name and I will create files there.
