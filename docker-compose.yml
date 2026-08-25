@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  sandbox:
+    build: .
+    container_name: genai-sandbox
+    volumes:
+      - ./:/workspace
+      - ./data:/workspace/data
+    working_dir: /workspace
+    tty: true
+    command: tail -f /dev/null
+    ports:
+      - "8000:8000" # optional if you add a small web UI later

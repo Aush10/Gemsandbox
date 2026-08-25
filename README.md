@@ -1,5 +1,3 @@
-# Gemsandbox
-Gemini sandbox for testing formulas in a virtual environment
 # genai-sandbox (text→SQL / spreadsheet / code evaluation harness)
 
 Small repo to help bootstrap a generative-AI evaluation & sandbox for SQL, spreadsheet transformations, JS, and Java snippets.
@@ -21,3 +19,4 @@ Quickstart (local)
 4. Run evaluation demo:
    python3 eval/eval_runner.py --tasks examples/sample_task.json --candidates-dir examples/candidates
 
+If you want this pushed to a GitHub repo, give me the repo owner/name and I will create files there.

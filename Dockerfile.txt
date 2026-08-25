@@ -1,0 +1,21 @@
+FROM python:3.11-slim
+
+# Install tools: sqlite3, node, openjdk, build essentials
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    sqlite3 \
+    nodejs npm \
+    openjdk-17-jdk \
+    gcc make git \
+  && rm -rf /var/lib/apt/lists/*
+
+# Install Python deps
+WORKDIR /workspace
+COPY requirements.txt /workspace/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install node vm2
+RUN npm install -g vm2
+
+ENV LANG C.UTF-8
+
+ENTRYPOINT ["/bin/bash"]
